@@ -1,0 +1,258 @@
+/* IMPORT FONTS DIN GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+/* ASTERIKSU INSEAMNA SELECTAREA TUTUROR ELEMENTELOR DIN PAGINA */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+}
+
+.max-width{
+    max-width:1300px;
+    padding: 0 80px;
+    margin:auto;
+}
+
+/* navbar styling */
+
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    padding: 20px 0;
+
+    font-family: 'Ubuntu' , sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 10px 0;
+    background-color:crimson;
+}
+
+.navbar .max-width{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.navbar .logo .logo-img{
+    margin:0;
+    padding:0;
+}
+.navbar .logo a img {
+    margin:0;
+    padding:0;
+    width: 100px;
+}
+
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+
+}
+.navbar .menu li a {
+    font-size:16px;
+    font-weight: 500;
+    margin-left: 25px;
+    color: #fff;
+}
+.navbar .menu li a:hover{
+    color:crimson;
+    transition: color 0.3s ease;
+}
+
+.navbar.sticky .menu li a:hover{
+    color: black;
+    transition: color 0.3s ease;
+}
+
+/* HOME BEGINING */
+
+.home {
+    display: flex;
+    background: url("images/bannermain.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  .home .max-width {
+      margin: auto 0 auto 40px;
+  }
+
+  .home .home-content .text-1 {
+       font-size: 27px;
+  }
+
+  .home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left:-3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color:crimson;
+    font-weight: 500;
+}
+
+.menu-btn{
+    color:white;
+    cursor:pointer;
+    font-size: 16px;
+    display: none;
+}
+/* ALL CONTENT SIMILARY  */
+section{
+    padding: 100px 0;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px; 
+    padding-bottom: 20px;
+    font-family: 'Ubuntu' , sans-serif;
+}
+
+section .title::before{
+    content: "";
+    position: absolute;
+ bottom: 0px;
+ left: 50%;
+    width: 180px;
+    height: 3px;
+    background-color: #111;
+    transform:translateX(-50%);
+    
+}
+/* Login form */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    cursor:pointer;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: crimson;
+    color: white;
+  }
+  input#loginhover:hover{
+      background-color: black;
+  }
+  #register{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+    background-color: crimson;
+    cursor:pointer;
+    color: white;
+  }
+  #register:hover{
+      background-color: black;
+  }
+  
+  /* Style the container for inputs */
+  .container {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+/* Media querie */
+
+@media (max-width: 905px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top:0;
+        background-color: #111;
+        text-align: center;
+        padding-top: 120px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+       left:0%;
+
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 1075px){
+    .about .about-content .column{
+        width: 50%;
+       
+    }
+}
+@media (max-width: 985px){
+    .about .about-content .column{
+        width: 45%;
+         }
+         .about .about-content .left img{
+            height:350px;
+            width: 350px;
+         }
+}
+@media (max-width: 850px){
+.about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+.about .about-content .right{
+    flex: 100%;
+}
+.about .about-content .right a{
+    display: flex;
+    justify-content: center;
+    
+}
+.services .serv-content .card{
+    width: 100%;
+    margin: 5px;
+}
+}
+
+label.error{
+    display: block;
+    color: red;
+    font-style: italic;
+    margin-bottom: 20px;
+}
